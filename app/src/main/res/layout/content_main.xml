@@ -99,5 +99,12 @@
         android:padding="10dp"
         android:visibility="gone"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bật camera cảm biến"
+        android:id="@+id/camera_sensor"
+        android:padding="10dp"
+        />
 
 </LinearLayout>

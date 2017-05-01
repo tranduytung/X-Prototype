@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     Button change_status_car_btn;
     Button capo_on_btn;
     Button capo_off_btn;
+    Button camera_sensor_btn;
     TextView status_car;
 
     int status = 0; // đang dừng = 0, đang đi = 1
@@ -49,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
         anti_theft_on_btn = (Button)findViewById(R.id.anti_theft_on);
         capo_off_btn = (Button)findViewById(R.id.capo_off);
         capo_on_btn = (Button)findViewById(R.id.capo_on);
+        camera_sensor_btn = (Button)findViewById(R.id.camera_sensor);
+        camera_sensor_btn = (Button)findViewById(R.id.camera_sensor);
 
         // chảng status car và vô hiệu hóa cốp xe
         change_status_car_btn.setOnClickListener(new View.OnClickListener() {
@@ -223,6 +226,31 @@ public class MainActivity extends AppCompatActivity {
                                 // chuyển màn hình
 //                            Intent inten = new Intent(MainActivity.this, Main3Activity.class);
 //                            startActivity(inten);
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // do nothing
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+            }
+        });
+
+        // camera sensor
+        camera_sensor_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Mở camera cảm biến")
+                        .setMessage("Bạn có muốn mở camera cảm biến?")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
+                            public void onClick(DialogInterface dialog, int which) {
+                            //chuyển màn hình
+                            Intent inten = new Intent(MainActivity.this, CameraSensorActivity.class);
+                            startActivity(inten);
                             }
                         })
                         .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
