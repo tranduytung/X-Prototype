@@ -83,4 +83,21 @@
         android:visibility="gone"
         />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Capo - Đang đóng"
+        android:id="@+id/capo_off"
+        android:padding="10dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Capo - Đang mở"
+        android:id="@+id/capo_on"
+        android:textColor="#298A08"
+        android:padding="10dp"
+        android:visibility="gone"
+        />
+
 </LinearLayout>
