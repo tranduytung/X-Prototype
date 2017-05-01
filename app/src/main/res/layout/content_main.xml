@@ -122,5 +122,12 @@
         android:padding="10dp"
         android:visibility="gone"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mở cửa bằng vân tay"
+        android:id="@+id/finger_sensor"
+        android:padding="10dp"
+        />
 
 </LinearLayout>

@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     Button camera_sensor_btn;
     Button air_conditioner_on_btn;
     Button air_conditioner_off_btn;
+    Button finger_sensor_btn;
     TextView status_car;
 
     int status = 0; // đang dừng = 0, đang đi = 1
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         camera_sensor_btn = (Button)findViewById(R.id.camera_sensor);
         air_conditioner_off_btn = (Button)findViewById(R.id.air_conditioner_off);
         air_conditioner_on_btn = (Button)findViewById(R.id.air_conditioner_on);
+        finger_sensor_btn = (Button)findViewById(R.id.finger_sensor);
 
         // chảng status car và vô hiệu hóa cốp xe
         change_status_car_btn.setOnClickListener(new View.OnClickListener() {
@@ -317,6 +320,16 @@ public class MainActivity extends AppCompatActivity {
                         })
                         .setIcon(android.R.drawable.ic_dialog_alert)
                         .show();
+            }
+        });
+
+        //finger sensor
+        finger_sensor_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                //chuyển màn hình
+                Intent inten = new Intent(MainActivity.this, FingerSensorActivity.class);
+                startActivity(inten);
             }
         });
     }
