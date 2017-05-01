@@ -106,5 +106,21 @@
         android:id="@+id/camera_sensor"
         android:padding="10dp"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Điều hòa - Đang tắt"
+        android:id="@+id/air_conditioner_off"
+        android:padding="10dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Điều hòa - Đang bật"
+        android:id="@+id/air_conditioner_on"
+        android:textColor="#298A08"
+        android:padding="10dp"
+        android:visibility="gone"
+        />
 
 </LinearLayout>

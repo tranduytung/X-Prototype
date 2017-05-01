@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     Button capo_on_btn;
     Button capo_off_btn;
     Button camera_sensor_btn;
+    Button air_conditioner_on_btn;
+    Button air_conditioner_off_btn;
     TextView status_car;
 
     int status = 0; // đang dừng = 0, đang đi = 1
@@ -51,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
         capo_off_btn = (Button)findViewById(R.id.capo_off);
         capo_on_btn = (Button)findViewById(R.id.capo_on);
         camera_sensor_btn = (Button)findViewById(R.id.camera_sensor);
-        camera_sensor_btn = (Button)findViewById(R.id.camera_sensor);
+        air_conditioner_off_btn = (Button)findViewById(R.id.air_conditioner_off);
+        air_conditioner_on_btn = (Button)findViewById(R.id.air_conditioner_on);
 
         // chảng status car và vô hiệu hóa cốp xe
         change_status_car_btn.setOnClickListener(new View.OnClickListener() {
@@ -251,6 +254,60 @@ public class MainActivity extends AppCompatActivity {
                             //chuyển màn hình
                             Intent inten = new Intent(MainActivity.this, CameraSensorActivity.class);
                             startActivity(inten);
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // do nothing
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+            }
+        });
+
+        // điều hòa
+        air_conditioner_off_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(final View v) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Điều hòa - Đang Tắt")
+                        .setMessage("Bạn có muốn bật chức năng điều hòa tự động theo lịch?")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
+                            public void onClick(DialogInterface dialog, int which) {
+                                // ẩn màn hình
+                                v.setVisibility(View.GONE);
+                                air_conditioner_on_btn.setVisibility(View.VISIBLE);
+                                // chuyển màn hình
+//                            Intent inten = new Intent(MainActivity.this, Main3Activity.class);
+//                            startActivity(inten);
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // do nothing
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+            }
+        });
+        air_conditioner_on_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(final View v) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Điều hòa - Đang Bật")
+                        .setMessage("Bạn có muốn tắt chức năng bật điều hòa tự động?")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
+                            public void onClick(DialogInterface dialog, int which) {
+                                // ẩn màn hình
+                                v.setVisibility(View.GONE);
+                                air_conditioner_off_btn.setVisibility(View.VISIBLE);
+                                // chuyển màn hình
+//                            Intent inten = new Intent(MainActivity.this, Main3Activity.class);
+//                            startActivity(inten);
                             }
                         })
                         .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
