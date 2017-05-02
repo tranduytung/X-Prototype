@@ -523,8 +523,8 @@ public class MainActivity extends AppCompatActivity {
         maps_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent inten = new Intent(MainActivity.this, Main3Activity.class);
-//                startActivity(inten);
+                Intent inten = new Intent(MainActivity.this, MapsActivity.class);
+                startActivity(inten);
             }
         });
 
