@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     Button mirror_on_btn;
     Button light_off_btn;
     Button light_on_btn;
+    Button device_off_btn;
+    Button device_on_btn;
 
     int status = 0; // đang dừng = 0, đang đi = 1
     @Override
@@ -68,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
         mirror_on_btn = (Button)findViewById(R.id.mirror_on);
         light_off_btn = (Button)findViewById(R.id.light_off);
         light_on_btn = (Button)findViewById(R.id.light_on);
+        device_off_btn = (Button)findViewById(R.id.device_off);
+        device_on_btn = (Button)findViewById(R.id.device_on);
 
         // chảng status car và vô hiệu hóa cốp xe
         change_status_car_btn.setOnClickListener(new View.OnClickListener() {
@@ -93,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 new AlertDialog.Builder(MainActivity.this)
                     .setTitle("Bật báo chống trộm")
                     .setMessage("Bạn có muốn bật chức năng báo chống trộm từ xa?")
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    .setPositiveButton("Có", new DialogInterface.OnClickListener() {
                         //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
                         public void onClick(DialogInterface dialog, int which) {
                             // ẩn màn hình
@@ -104,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 //                            startActivity(inten);
                         }
                     })
-                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    .setNegativeButton("Không", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             // do nothing
                         }
@@ -119,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
                 new AlertDialog.Builder(MainActivity.this)
                     .setTitle("Tắt báo chống trộm")
                     .setMessage("Bạn có muốn tắt chức năng báo chống trộm từ xa?")
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    .setPositiveButton("Có", new DialogInterface.OnClickListener() {
                         //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
                         public void onClick(DialogInterface dialog, int which) {
                             // ẩn màn hình
@@ -130,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
 //                            startActivity(inten);
                         }
                     })
-                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    .setNegativeButton("Không", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             // do nothing
                         }
@@ -155,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
                 new AlertDialog.Builder(MainActivity.this)
                         .setTitle("Mở Cốp Xe")
                         .setMessage("Bạn có muốn mở cốp xe?")
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
                             //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
                             public void onClick(DialogInterface dialog, int which) {
                                 // ẩn màn hình
@@ -166,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
 //                            startActivity(inten);
                             }
                         })
-                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Không", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // do nothing
                             }
@@ -181,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
                 new AlertDialog.Builder(MainActivity.this)
                         .setTitle("Đóng cốp xe")
                         .setMessage("Bạn có muốn đóng cốp xe?")
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
                             //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
                             public void onClick(DialogInterface dialog, int which) {
                                 // ẩn màn hình
@@ -192,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
 //                            startActivity(inten);
                             }
                         })
-                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Không", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // do nothing
                             }
@@ -207,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
                 new AlertDialog.Builder(MainActivity.this)
                         .setTitle("Mở Capo")
                         .setMessage("Bạn có muốn mở Capo xe?")
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
                             //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
                             public void onClick(DialogInterface dialog, int which) {
                                 // ẩn màn hình
@@ -218,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
 //                            startActivity(inten);
                             }
                         })
-                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Không", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // do nothing
                             }
@@ -233,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
                 new AlertDialog.Builder(MainActivity.this)
                         .setTitle("Đóng Capo")
                         .setMessage("Bạn có muốn đóng Capo xe?")
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
                             //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
                             public void onClick(DialogInterface dialog, int which) {
                                 // ẩn màn hình
@@ -244,7 +248,7 @@ public class MainActivity extends AppCompatActivity {
 //                            startActivity(inten);
                             }
                         })
-                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Không", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // do nothing
                             }
@@ -261,7 +265,7 @@ public class MainActivity extends AppCompatActivity {
                 new AlertDialog.Builder(MainActivity.this)
                         .setTitle("Mở camera cảm biến")
                         .setMessage("Bạn có muốn mở camera cảm biến?")
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
                             //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
                             public void onClick(DialogInterface dialog, int which) {
                             //chuyển màn hình
@@ -269,7 +273,7 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(inten);
                             }
                         })
-                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Không", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // do nothing
                             }
@@ -286,7 +290,7 @@ public class MainActivity extends AppCompatActivity {
                 new AlertDialog.Builder(MainActivity.this)
                         .setTitle("Điều hòa - Đang Tắt")
                         .setMessage("Bạn có muốn bật chức năng điều hòa tự động theo lịch?")
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
                             //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
                             public void onClick(DialogInterface dialog, int which) {
                                 // ẩn màn hình
@@ -297,7 +301,7 @@ public class MainActivity extends AppCompatActivity {
 //                            startActivity(inten);
                             }
                         })
-                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Không", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // do nothing
                             }
@@ -312,7 +316,7 @@ public class MainActivity extends AppCompatActivity {
                 new AlertDialog.Builder(MainActivity.this)
                         .setTitle("Điều hòa - Đang Bật")
                         .setMessage("Bạn có muốn tắt chức năng bật điều hòa tự động?")
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
                             //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
                             public void onClick(DialogInterface dialog, int which) {
                                 // ẩn màn hình
@@ -323,7 +327,7 @@ public class MainActivity extends AppCompatActivity {
 //                            startActivity(inten);
                             }
                         })
-                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Không", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // do nothing
                             }
@@ -360,7 +364,7 @@ public class MainActivity extends AppCompatActivity {
                 new AlertDialog.Builder(MainActivity.this)
                         .setTitle("Mở gương xe")
                         .setMessage("Bạn có muốn mở gương xe?")
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
                             //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
                             public void onClick(DialogInterface dialog, int which) {
                                 // ẩn màn hình
@@ -371,7 +375,7 @@ public class MainActivity extends AppCompatActivity {
 //                            startActivity(inten);
                             }
                         })
-                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Không", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // do nothing
                             }
@@ -386,7 +390,7 @@ public class MainActivity extends AppCompatActivity {
                 new AlertDialog.Builder(MainActivity.this)
                         .setTitle("Đóng gương xe")
                         .setMessage("Bạn có muốn đóng gương xe?")
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
                             //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
                             public void onClick(DialogInterface dialog, int which) {
                                 // ẩn màn hình
@@ -397,7 +401,7 @@ public class MainActivity extends AppCompatActivity {
 //                            startActivity(inten);
                             }
                         })
-                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Không", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // do nothing
                             }
@@ -413,7 +417,7 @@ public class MainActivity extends AppCompatActivity {
                 new AlertDialog.Builder(MainActivity.this)
                         .setTitle("Đèn xe tự động")
                         .setMessage("Bạn có bật chắc năng tự điểu chỉnh đèn xe?")
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
                             //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
                             public void onClick(DialogInterface dialog, int which) {
                                 // ẩn màn hình
@@ -424,7 +428,7 @@ public class MainActivity extends AppCompatActivity {
 //                            startActivity(inten);
                             }
                         })
-                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Không", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // do nothing
                             }
@@ -439,7 +443,7 @@ public class MainActivity extends AppCompatActivity {
                 new AlertDialog.Builder(MainActivity.this)
                         .setTitle("Đèn xe tự động")
                         .setMessage("Bạn có tắt chắc năng tự điểu chỉnh đèn xe?")
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
                             //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
                             public void onClick(DialogInterface dialog, int which) {
                                 // ẩn màn hình
@@ -450,7 +454,61 @@ public class MainActivity extends AppCompatActivity {
 //                            startActivity(inten);
                             }
                         })
-                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Không", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // do nothing
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+            }
+        });
+
+        // thiet bi xe
+        device_off_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(final View v) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Điều khiển thiết bị xe")
+                        .setMessage("Bạn có bật chắc năng điểu khiển thiết bị xe?")
+                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
+                            //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
+                            public void onClick(DialogInterface dialog, int which) {
+                                // ẩn màn hình
+                                v.setVisibility(View.GONE);
+                                device_on_btn.setVisibility(View.VISIBLE);
+                                // chuyển màn hình
+//                            Intent inten = new Intent(MainActivity.this, Main3Activity.class);
+//                            startActivity(inten);
+                            }
+                        })
+                        .setNegativeButton("Không", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // do nothing
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+            }
+        });
+        device_on_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(final View v) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Điều khiển thiết bị xe")
+                        .setMessage("Bạn có tắt chắc năng điểu khiển thiết bị xe?")
+                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
+                            //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
+                            public void onClick(DialogInterface dialog, int which) {
+                                // ẩn màn hình
+                                v.setVisibility(View.GONE);
+                                device_off_btn.setVisibility(View.VISIBLE);
+                                // chuyển màn hình
+//                            Intent inten = new Intent(MainActivity.this, Main3Activity.class);
+//                            startActivity(inten);
+                            }
+                        })
+                        .setNegativeButton("Không", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // do nothing
                             }

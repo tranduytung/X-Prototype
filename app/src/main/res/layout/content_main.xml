@@ -8,28 +8,13 @@
     tools:context="com.example.duytung.x_prototype.MainActivity"
     tools:showIn="@layout/activity_main"
     android:orientation="vertical">
-    <!--<android.support.constraint.ConstraintLayout-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:orientation="vertical">-->
-        <!--<TextView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginBottom="10dp"-->
-            <!--android:id="@+id/status"-->
-            <!--android:textColor="#013ADF"-->
-            <!--android:layout_gravity="center_horizontal"-->
-            <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
-            <!--android:text="Xe đang dừng"/>-->
-        <!--<Button-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="Change"-->
-            <!--android:id="@+id/change_status_car"-->
-            <!--android:padding="10dp"-->
-            <!--/>-->
-
-    <!--</android.support.constraint.ConstraintLayout>-->
+    <ScrollView  android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
     <TextView
         android:layout_width="wrap_content"
@@ -168,5 +153,22 @@
         android:padding="10dp"
         android:visibility="gone"
         />
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Điều chỉnh thiết bị xe - Đang tắt"
+        android:id="@+id/device_off"
+        android:padding="10dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Điều chỉnh thiết bị xe - Đang mở"
+        android:id="@+id/device_on"
+        android:textColor="#298A08"
+        android:padding="10dp"
+        android:visibility="gone"
+        />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
