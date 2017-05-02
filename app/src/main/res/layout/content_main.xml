@@ -136,5 +136,21 @@
         android:id="@+id/seat_change"
         android:padding="10dp"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gương xe - Đang đóng"
+        android:id="@+id/mirror_off"
+        android:padding="10dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gương xe - Đang mở"
+        android:id="@+id/mirror_on"
+        android:textColor="#298A08"
+        android:padding="10dp"
+        android:visibility="gone"
+        />
 
 </LinearLayout>

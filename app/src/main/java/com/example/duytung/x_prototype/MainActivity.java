@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     Button finger_sensor_btn;
     Button seat_change_btn;
     TextView status_car;
+    Button mirror_off_btn;
+    Button mirror_on_btn;
 
     int status = 0; // đang dừng = 0, đang đi = 1
     @Override
@@ -60,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
         air_conditioner_on_btn = (Button)findViewById(R.id.air_conditioner_on);
         finger_sensor_btn = (Button)findViewById(R.id.finger_sensor);
         seat_change_btn = (Button)findViewById(R.id.seat_change);
+        mirror_off_btn = (Button)findViewById(R.id.mirror_off);
+        mirror_on_btn = (Button)findViewById(R.id.mirror_on);
 
         // chảng status car và vô hiệu hóa cốp xe
         change_status_car_btn.setOnClickListener(new View.OnClickListener() {
@@ -342,6 +346,60 @@ public class MainActivity extends AppCompatActivity {
                 //chuyển màn hình
                 Intent inten = new Intent(MainActivity.this, SeatActivity.class);
                 startActivity(inten);
+            }
+        });
+
+        // guong xe
+        mirror_off_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(final View v) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Mở gương xe")
+                        .setMessage("Bạn có muốn mở gương xe?")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
+                            public void onClick(DialogInterface dialog, int which) {
+                                // ẩn màn hình
+                                v.setVisibility(View.GONE);
+                                mirror_on_btn.setVisibility(View.VISIBLE);
+                                // chuyển màn hình
+//                            Intent inten = new Intent(MainActivity.this, Main3Activity.class);
+//                            startActivity(inten);
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // do nothing
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+            }
+        });
+        mirror_on_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(final View v) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Đóng gương xe")
+                        .setMessage("Bạn có muốn đóng gương xe?")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            //                    Button chong_trom_off = (Button)findViewById(R.id.chong_trom_off);
+                            public void onClick(DialogInterface dialog, int which) {
+                                // ẩn màn hình
+                                v.setVisibility(View.GONE);
+                                mirror_off_btn.setVisibility(View.VISIBLE);
+                                // chuyển màn hình
+//                            Intent inten = new Intent(MainActivity.this, Main3Activity.class);
+//                            startActivity(inten);
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // do nothing
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
             }
         });
     }
