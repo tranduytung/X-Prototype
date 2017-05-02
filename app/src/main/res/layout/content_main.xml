@@ -152,5 +152,21 @@
         android:padding="10dp"
         android:visibility="gone"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đèn xe tự động - Đang tắt"
+        android:id="@+id/light_off"
+        android:padding="10dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đèn xe tự động - Đang mở"
+        android:id="@+id/light_on"
+        android:textColor="#298A08"
+        android:padding="10dp"
+        android:visibility="gone"
+        />
 
 </LinearLayout>
