@@ -16,159 +16,166 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:id="@+id/status_car"
-        android:textColor="#013ADF"
-        android:layout_gravity="center_horizontal"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Xe Đang Dừng"
-        />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/status_car"
+                android:textColor="#013ADF"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Xe Đang Dừng"
+                />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Change"
-        android:id="@+id/change_status_car"
-        android:padding="10dp"
-    />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change"
+                android:id="@+id/change_status_car"
+                android:padding="10dp"
+            />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Chống Trộm - Đang tắt"
-        android:id="@+id/anti_theft_off"
-        android:padding="10dp"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Chống Trộm - Đang bật"
-        android:id="@+id/anti_theft_on"
-        android:textColor="#298A08"
-        android:padding="10dp"
-        android:visibility="gone"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cốp xe - Đang đóng"
-        android:id="@+id/trunk_off"
-        android:padding="10dp"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cốp xe - Đang mở"
-        android:id="@+id/trunk_on"
-        android:textColor="#298A08"
-        android:padding="10dp"
-        android:visibility="gone"
-        />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chống Trộm - Đang tắt"
+                android:id="@+id/anti_theft_off"
+                android:padding="10dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chống Trộm - Đang bật"
+                android:id="@+id/anti_theft_on"
+                android:textColor="#298A08"
+                android:padding="10dp"
+                android:visibility="gone"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cốp xe - Đang đóng"
+                android:id="@+id/trunk_off"
+                android:padding="10dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cốp xe - Đang mở"
+                android:id="@+id/trunk_on"
+                android:textColor="#298A08"
+                android:padding="10dp"
+                android:visibility="gone"
+                />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Capo - Đang đóng"
-        android:id="@+id/capo_off"
-        android:padding="10dp"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Capo - Đang mở"
-        android:id="@+id/capo_on"
-        android:textColor="#298A08"
-        android:padding="10dp"
-        android:visibility="gone"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Bật camera cảm biến"
-        android:id="@+id/camera_sensor"
-        android:padding="10dp"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Điều hòa - Đang tắt"
-        android:id="@+id/air_conditioner_off"
-        android:padding="10dp"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Điều hòa - Đang bật"
-        android:id="@+id/air_conditioner_on"
-        android:textColor="#298A08"
-        android:padding="10dp"
-        android:visibility="gone"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Mở cửa bằng vân tay"
-        android:id="@+id/finger_sensor"
-        android:padding="10dp"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Chỉnh ghế ngồi"
-        android:id="@+id/seat_change"
-        android:padding="10dp"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Gương xe - Đang đóng"
-        android:id="@+id/mirror_off"
-        android:padding="10dp"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Gương xe - Đang mở"
-        android:id="@+id/mirror_on"
-        android:textColor="#298A08"
-        android:padding="10dp"
-        android:visibility="gone"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Đèn xe tự động - Đang tắt"
-        android:id="@+id/light_off"
-        android:padding="10dp"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Đèn xe tự động - Đang mở"
-        android:id="@+id/light_on"
-        android:textColor="#298A08"
-        android:padding="10dp"
-        android:visibility="gone"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Điều chỉnh thiết bị xe - Đang tắt"
-        android:id="@+id/device_off"
-        android:padding="10dp"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Điều chỉnh thiết bị xe - Đang mở"
-        android:id="@+id/device_on"
-        android:textColor="#298A08"
-        android:padding="10dp"
-        android:visibility="gone"
-        />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Capo - Đang đóng"
+                android:id="@+id/capo_off"
+                android:padding="10dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Capo - Đang mở"
+                android:id="@+id/capo_on"
+                android:textColor="#298A08"
+                android:padding="10dp"
+                android:visibility="gone"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bật camera cảm biến"
+                android:id="@+id/camera_sensor"
+                android:padding="10dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Điều hòa - Đang tắt"
+                android:id="@+id/air_conditioner_off"
+                android:padding="10dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Điều hòa - Đang bật"
+                android:id="@+id/air_conditioner_on"
+                android:textColor="#298A08"
+                android:padding="10dp"
+                android:visibility="gone"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mở cửa bằng vân tay"
+                android:id="@+id/finger_sensor"
+                android:padding="10dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chỉnh ghế ngồi"
+                android:id="@+id/seat_change"
+                android:padding="10dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gương xe - Đang đóng"
+                android:id="@+id/mirror_off"
+                android:padding="10dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gương xe - Đang mở"
+                android:id="@+id/mirror_on"
+                android:textColor="#298A08"
+                android:padding="10dp"
+                android:visibility="gone"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đèn xe tự động - Đang tắt"
+                android:id="@+id/light_off"
+                android:padding="10dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đèn xe tự động - Đang mở"
+                android:id="@+id/light_on"
+                android:textColor="#298A08"
+                android:padding="10dp"
+                android:visibility="gone"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Điều chỉnh thiết bị xe - Đang tắt"
+                android:id="@+id/device_off"
+                android:padding="10dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Điều chỉnh thiết bị xe - Đang mở"
+                android:id="@+id/device_on"
+                android:textColor="#298A08"
+                android:padding="10dp"
+                android:visibility="gone"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tìm đường"
+                android:id="@+id/maps"
+                android:padding="10dp"
+                />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

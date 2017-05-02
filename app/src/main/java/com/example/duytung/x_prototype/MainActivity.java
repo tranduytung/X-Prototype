@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     Button light_on_btn;
     Button device_off_btn;
     Button device_on_btn;
+    Button maps_btn;
 
     int status = 0; // đang dừng = 0, đang đi = 1
     @Override
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         light_on_btn = (Button)findViewById(R.id.light_on);
         device_off_btn = (Button)findViewById(R.id.device_off);
         device_on_btn = (Button)findViewById(R.id.device_on);
+        maps_btn = (Button)findViewById(R.id.maps);
 
         // chảng status car và vô hiệu hóa cốp xe
         change_status_car_btn.setOnClickListener(new View.OnClickListener() {
@@ -517,6 +519,15 @@ public class MainActivity extends AppCompatActivity {
                         .show();
             }
         });
+        // maps
+        maps_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent inten = new Intent(MainActivity.this, Main3Activity.class);
+//                startActivity(inten);
+            }
+        });
+
     }
 
     @Override
