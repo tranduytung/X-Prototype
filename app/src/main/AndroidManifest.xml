@@ -26,7 +26,11 @@
         <activity
             android:name=".FingerSensorActivity"
             android:label="@string/title_activity_finger_sensor"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SeatActivity"
+            android:label="@string/title_activity_seat"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -129,5 +129,12 @@
         android:id="@+id/finger_sensor"
         android:padding="10dp"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chỉnh ghế ngồi"
+        android:id="@+id/seat_change"
+        android:padding="10dp"
+        />
 
 </LinearLayout>
