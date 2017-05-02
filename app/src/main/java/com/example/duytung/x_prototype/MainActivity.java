@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent inten = new Intent(MainActivity.this, SpeakActivity.class);
+                startActivity(inten);
             }
         });
 
@@ -526,8 +526,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent inten = new Intent(MainActivity.this, MapsActivity.class);
                 startActivity(inten);
             }
-        });
-
+        });;
     }
 
     @Override
@@ -546,7 +545,8 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent inten = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(inten);
         }
 
         return super.onOptionsItemSelected(item);
